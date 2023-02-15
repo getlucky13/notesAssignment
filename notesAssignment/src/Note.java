@@ -39,7 +39,8 @@ public class Note {
     }
 
     public void setName(int noteVal) {
-        int formattedVal;
+        int formattedVal, octave;
+        octave = (noteVal/12) + 4;
         if(noteVal < 0){
             formattedVal = (noteVal % 12) + 12;
         } else {
@@ -83,6 +84,7 @@ public class Note {
                 noteName = "Ab";
                 break;
         }
+        noteName += octave;
     }
 
     public void setFreq(double noteVal) {
@@ -108,9 +110,14 @@ public class Note {
         }
     }
 
+    public String toJfugue() {
+        return noteName + length;
+    }
+
 
     public static void main(String[] args) throws Exception {
         Note Db = new Note("q", -8);
         boolean sharp = Db.isSharp(Db.getVal());
+        System.out.println(Db.toJfugue());
     }
 }

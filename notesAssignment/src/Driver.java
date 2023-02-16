@@ -13,6 +13,14 @@ public class Driver {
             player.play(notes[i].toJfugue());
         }
     }
+
+    public static Pattern toPattern(Note[] measure) {
+        Pattern output = new Pattern();
+        for(int i = 0; i < measure.length; i++) {
+            output.add(measure[i].toJfugue());
+        }
+        return output;
+    }
    
     public static void main(String[] args) throws Exception {
         Note D3 = new Note("h", -19);

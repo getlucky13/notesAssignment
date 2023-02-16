@@ -25,6 +25,10 @@ public class Driver {
         Note[] DAG = {D3, A3, G3};
         Note[] CDG = {C4, D4, G3};
 
+        Player player = new Player();
 
+        playNotes(DAG);
+        playNotes(CDG);
+        player.play(A4.toJfugue());
     }
 }

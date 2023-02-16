@@ -3,6 +3,10 @@ import org.jfugue.player.Player;
 public class Driver {
 
     public static void playNotes(Note[] notes) {
+        /*
+         * If time allows, look into feeding array into pattern instead of 
+         * playing each address of the array individually
+         */
         Player player = new Player();
         for(int i = 0; i< notes.length;i++){
             player.play(notes[i].toJfugue());

@@ -26,7 +26,6 @@ public class Driver {
         Note D3 = new Note("h", -19);
         Note A3 = new Note("q", -12);
         Note G3 = new Note("q", -14);
-
         Note C4 = new Note("h", -9);
         Note D4 = new Note("q", -7);
         Note A4 = new Note();
@@ -40,8 +39,8 @@ public class Driver {
         A4.setLength("w");
 
         Pattern p3 = toPattern(DAG).setVoice(3).setInstrument("Guitar");
-        player.play(A4.toJfugue());
+        //player.play(A4.toJfugue());
         player.play(p3);
-        player.play(p1, p2);
+        //player.play(p1, p2);
     }
 }

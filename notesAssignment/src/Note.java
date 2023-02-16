@@ -83,6 +83,9 @@ public class Note {
             case 11:
                 noteName = "Ab";
                 break;
+            case 12:
+                noteName = "A";
+                break;
         }
         noteName += octave;
     }

@@ -3,16 +3,18 @@ import org.jfugue.pattern.Pattern;
 
 public class Driver {
 
-    public static void playNotes(Note[] notes) {
-        /*
-         * If time allows, look into feeding array into pattern instead of 
-         * playing each address of the array individually
-         */
+    /* 
+     * Commented this out for now, as functionality was better achived using
+     * toPattern method below.
+     *
+        public static void playNotes(Note[] notes) {
+        
         Player player = new Player();
         for(int i = 0; i< notes.length;i++){
             player.play(notes[i].toJfugue());
         }
     }
+    */
 
     public static Pattern toPattern(Note[] measure) {
         Pattern output = new Pattern();

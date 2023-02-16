@@ -37,11 +37,11 @@ public class Driver {
         Pattern p2 = new Pattern("V1 I[Flute] Rw     | Rw     | GmajQQQ  CmajQ");
 
         Player player = new Player();
-
-        playNotes(DAG);
-        playNotes(CDG);
         A4.setLength("w");
+
+        Pattern p3 = toPattern(DAG).setVoice(3).setInstrument("Guitar");
         player.play(A4.toJfugue());
+        player.play(p3);
         player.play(p1, p2);
     }
 }

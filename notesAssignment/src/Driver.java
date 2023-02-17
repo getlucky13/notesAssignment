@@ -2,20 +2,7 @@ import org.jfugue.player.Player;
 import org.jfugue.pattern.Pattern;
 
 public class Driver {
-
-    /* 
-     * Commented this out for now, as functionality was better achived using
-     * toPattern method below.
-     *
-        public static void playNotes(Note[] notes) {
-        
-        Player player = new Player();
-        for(int i = 0; i< notes.length;i++){
-            player.play(notes[i].toJfugue());
-        }
-    }
-    */
-
+    
     /** Uses a for loop to convert an array of Notes into a pattern for JFugue
      * @param measure Array of Note objects
      * @return pattern for playing through JFugue
@@ -40,8 +27,6 @@ public class Driver {
         Note D4 = new Note("q", -7);
         Note A4 = new Note();
         
-        
-       
         /*
          * Creates two arrays of Note objects
          */

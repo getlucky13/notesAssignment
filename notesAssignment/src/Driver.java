@@ -31,7 +31,7 @@ public class Driver {
    
     public static void main(String[] args) throws Exception {
         /*
-         * Creates a six different Note objects for use in testing
+         * Creates a seven different Note objects for use in testing
          */
         Note D3 = new Note("h", -19);
         Note A3 = new Note("q", -12);
@@ -39,7 +39,9 @@ public class Driver {
         Note C4 = new Note("h", -9);
         Note D4 = new Note("q", -7);
         Note A4 = new Note();
-
+        
+        
+       
         /*
          * Creates two arrays of Note objects
          */
@@ -50,7 +52,15 @@ public class Driver {
          * Creates a player object
          */
         Player player = new Player();
-
+        
+        /*
+         * Tests isSharp method
+         */
+        Note Bb6 = new Note("h", 25);
+        Boolean toTest = Bb6.isSharp(Bb6.getVal());
+        if(toTest == true) {
+            player.play(Bb6.toJfugue());
+        }
         /*
          * Sets length of Note A4 to a whole note, or w
          */

@@ -4,6 +4,10 @@ public class Note {
     private int value;
     private double frequency;
 
+    /**
+     * NoARg contstructor, sets length to a quarter note, value to 0, frequency to 440.0,
+     * and runs the setName method for the given value.
+     */
     public Note() {
         length = "q";
         value = 0;
@@ -11,6 +15,10 @@ public class Note {
         setName(value);
     }
 
+    /**Constructor to create a Note object while providing a length and value for the desired note
+     * @param noteLength Desired length of Note object
+     * @param noteVal Value of Note object
+     */
     public Note(String noteLength, int noteVal) {
         length = noteLength;
         value = noteVal;
@@ -18,26 +26,46 @@ public class Note {
         setFreq(noteVal);
     }
 
+    /** Basic get method for length value
+     * @return String stored in length field
+     */
     public String getLength() {
         return length;
     } 
 
+    /**Basic get method for Note value
+     * @return int stored in value field
+     */
     public int getVal() {
         return value;
     }
 
+    /**Basic get method for Note name
+     * @return String containing the value stored in noteName field
+     */
     public String getName() {
         return noteName;
     }
 
+    /**Setter method for length field
+     * @param noteLength String containing desired length of note
+     */
     public void setLength(String noteLength) {
         length = noteLength;
     }
 
+    /**Setter method for value field
+     * @param noteVal int to set value field to
+     */
     public void setVal(int noteVal) {
         value = noteVal;
     }
 
+    /**Method to set the name and octave of the note based on the given value.
+     * By dividiing the value by 12 and adding 4, the octave of the note is found.
+     * The remainder of that division yeilds the note name itself using a switch statement.
+     * @param noteVal int value of the note to set the name from
+     */
     public void setName(int noteVal) {
         int formattedVal, octave;
         octave = (noteVal/12) + 4;

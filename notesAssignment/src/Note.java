@@ -118,10 +118,19 @@ public class Note {
         noteName += octave;
     }
 
+    /**Method to calculate the frequency of the note from the value, stored into the 
+     * frequency field
+     * @param noteVal int value of note to calculate frequency from
+     */
     public void setFreq(double noteVal) {
         frequency = 440 * Math.pow(2.0, (noteVal/12));
     }
 
+    /**Method to determine if a note is sharpe or not by taking the remainder of the
+     * notes value when divided by 12. Uses a switch statement to return true or false
+     * @param noteVal int value of note to be checked
+     * @return boolean depending on whether note is false or not
+     */
     public boolean isSharp(int noteVal) {
         int formattedVal;
         if(noteVal < 0){
@@ -141,14 +150,15 @@ public class Note {
         }
     }
 
+    /**Method to format noteName and length for inputing into JFugue player
+     * @return String containing noteName and length, formatted for JFugue
+     */
     public String toJfugue() {
         return noteName + length;
     }
 
 
     public static void main(String[] args) throws Exception {
-        Note Db = new Note("q", -8);
-        boolean sharp = Db.isSharp(Db.getVal());
-        System.out.println(Db.toJfugue());
+        
     }
 }

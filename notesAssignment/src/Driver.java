@@ -72,6 +72,6 @@ public class Driver {
          * Tests declaring an instrument through JFugue in combination with
          * toJfugue method.
          
-        player.play("I[Guitar] "+ A4.toJfugue());
-    }*/
+        player.play("I[Guitar] "+ A4.toJfugue());*/
+    }
 }

@@ -26,21 +26,21 @@ public class Driver {
         Note C4 = new Note("h", -9);
         Note D4 = new Note("q", -7);
         Note A4 = new Note();
-        
+    
         /*
          * Creates two arrays of Note objects
-         */
+        
         Note[] DAG = {D3, A3, G3};
         Note[] CDG = {C4, D4, G3};
 
         /*
          * Creates a player object
-         */
+        
         Player player = new Player();
         
         /*
          * Tests isSharp method
-         */
+         
         Note Bb6 = new Note("h", 25);
         Boolean toTest = Bb6.isSharp(Bb6.getVal());
         if(toTest == true) {
@@ -48,30 +48,30 @@ public class Driver {
         }
         /*
          * Sets length of Note A4 to a whole note, or w
-         */
+         
         A4.setLength("w");
 
         /*
          * Uses the toPattern method to create patterns from each array, as well as sets the
          * voice and instrument for said patterns
-         */
+         
         Pattern p3 = toPattern(DAG).setVoice(3).setInstrument("Guitar");
         Pattern p4 = toPattern(CDG).setVoice(3).setInstrument("Guitar");
         
         /*
          * Adds the patterns together to make one single pattern
-         */
+         
         Pattern p5 = p3.add(p4);
 
         /*
          * Plays created pattern
-         */
+         
         player.play(p5);
 
         /*
          * Tests declaring an instrument through JFugue in combination with
          * toJfugue method.
-         */
+         
         player.play("I[Guitar] "+ A4.toJfugue());
-    }
+    }*/
 }

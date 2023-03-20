@@ -1,6 +1,6 @@
 import java.lang.Comparable;
 
-public class Note implements Comparable {
+public class Note implements Comparable<Note> {
 
     private String length, noteName;
     private int value;

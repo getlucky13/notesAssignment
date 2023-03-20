@@ -1,4 +1,6 @@
-public class Note {
+import java.lang.Comparable;
+
+public class Note implements Comparable {
 
     private String length, noteName;
     private int value;
@@ -155,5 +157,9 @@ public class Note {
      */
     public String toJfugue() {
         return noteName + length;
+    }
+
+    public int compareTo(Note input) {
+        return (int) (this.frequency - input.frequency);
     }
 }

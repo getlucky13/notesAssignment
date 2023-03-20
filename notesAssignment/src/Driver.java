@@ -41,6 +41,8 @@ public class Driver {
         c3Scale.add(D3);
         c3Scale.add(B3);
         
+        Player player = new Player();
+
         Collections.sort(c3Scale);
 
         int compTest = C3.compareTo(E3);
@@ -51,8 +53,7 @@ public class Driver {
         }
 
         Pattern scale = toPattern(c3Scale).setVoice(1).setInstrument("Piano");
-        
-
+        player.play(scale);
         /*
          * Creates two arrays of Note objects
         

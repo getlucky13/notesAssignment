@@ -28,6 +28,7 @@ public class Driver {
         Note A3 = new Note("q", -12);
         Note G3 = new Note("q", -14);
         Note B3 = new Note("q", -10);
+        Note C4 = new Note("q", -9);
         Note D3 = new Note("q", -19);
         Note F3 = new Note("q", -16);
         Note E3 = new Note("q", -17);
@@ -37,6 +38,7 @@ public class Driver {
         c3Scale.add(G3);
         c3Scale.add(A3);
         c3Scale.add(F3);
+        c3Scale.add(C4);
         c3Scale.add(E3);
         c3Scale.add(D3);
         c3Scale.add(B3);

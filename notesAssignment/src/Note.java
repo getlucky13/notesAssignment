@@ -156,9 +156,4 @@ public class Note {
     public String toJfugue() {
         return noteName + length;
     }
-
-
-    public static void main(String[] args) throws Exception {
-        
-    }
 }

@@ -70,7 +70,14 @@ public class Note implements Comparable<Note> {
      */
     public void setName(int noteVal) {
         int formattedVal, octave;
-        octave = (noteVal/12) + 4;
+        if (noteVal < 0 && noteVal >= -9) {
+            octave = 4;
+        } else if (noteVal < -9 && noteVal >=-12){
+            octave = 3;
+        } else {
+            octave = (noteVal/12) + 4;
+        }
+        
         if(noteVal < 0){
             formattedVal = (noteVal % 12) + 12;
         } else {

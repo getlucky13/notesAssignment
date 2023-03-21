@@ -33,6 +33,9 @@ public class Driver {
         Note F3 = new Note("q", -16);
         Note E3 = new Note("q", -17);
     
+        /*
+         * Creates an ArrayList of Note objs and adds previously created objs to list
+         */
         ArrayList<Note> c3Scale = new ArrayList<>();
         c3Scale.add(C3);
         c3Scale.add(G3);
@@ -43,19 +46,32 @@ public class Driver {
         c3Scale.add(D3);
         c3Scale.add(B3);
         
+        /*
+         * Creates a player object
+         */
         Player player = new Player();
 
+        /*
+         * Sorts c3Scale, demonstrating correct implementation of Comparable interface
+         */
         Collections.sort(c3Scale);
 
-        int compTest = C3.compareTo(E3);
-        if(compTest < 0) {
-            System.out.println("C3 is less than E3");
-        } else if (compTest > 0) {
+        /*
+         * Uses compareTo to output a string to user
+         */
+        if(C3.compareTo(E3) < 0) {
+            System.out.println("E3 is less than C3");
+        } else if (C3.compareTo(E3) > 0) {
             System.out.println("C3 is greater than E3");
         }
 
+        /*
+         * Feeds the c3Scale ArrayList into a Pattern object, and plays the pattern,
+         * correctly playing the C scale from C3 to C4.
+         */
         Pattern scale = toPattern(c3Scale).setVoice(1).setInstrument("Piano");
         player.play(scale);
+        
         /*
          * Creates two arrays of Note objects
         

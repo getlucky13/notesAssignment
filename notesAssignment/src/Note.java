@@ -66,6 +66,8 @@ public class Note implements Comparable<Note> {
     /**Method to set the name and octave of the note based on the given value.
      * By dividiing the value by 12 and adding 4, the octave of the note is found.
      * The remainder of that division yeilds the note name itself using a switch statement.
+     * When noteVal is between 0 and -12, special if-elseif handling is used to output
+     * the correct octave value.
      * @param noteVal int value of the note to set the name from
      */
     public void setName(int noteVal) {
@@ -77,7 +79,7 @@ public class Note implements Comparable<Note> {
         } else {
             octave = (noteVal/12) + 4;
         }
-        
+
         if(noteVal < 0){
             formattedVal = (noteVal % 12) + 12;
         } else {
@@ -166,6 +168,13 @@ public class Note implements Comparable<Note> {
         return noteName + length;
     }
 
+    /**
+     * Implements compareTo method of Comparable interface, comparing the frequency of
+     * the Note passed as an arg to the frequency of the calling Note. 
+     * @param input Note object to compare
+     * @return pos value if calling object is >, negative value if it is <, and 0
+     * if objects are equal
+     */
     public int compareTo(Note input) {
         return (int) (this.frequency - input.frequency);
     }

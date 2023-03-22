@@ -186,6 +186,16 @@ public class Note implements Comparable<Note> {
      * than, and 0 if objects are equal
      */
     public int compareTo(Note input) {
-        return (int) (this.frequency - input.frequency);
+        if(this.getLength() > input.getLength()){
+            return 1;
+        } else if (this.getLength() < input.getLength()) {
+            return -1;
+        } else if (this.getFrequency() > input.getFrequency()){
+            return 1;
+        } else if (this.getFrequency() < input.getFrequency()) {
+            return -1;
+        } else {
+            return 0;
+        }
     }
 }

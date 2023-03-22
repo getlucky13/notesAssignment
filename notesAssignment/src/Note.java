@@ -2,28 +2,26 @@ import java.lang.Comparable;
 
 public class Note implements Comparable<Note> {
 
-    private String length, noteName;
+    private String noteName;
     private int value;
-    private double frequency;
-
-    
+    private double length, frequency;
 
     /**
-     * NoARg contstructor, sets length to a quarter note, value to 0, frequency to 440.0,
+     * NoArg contstructor, sets length to a quarter note, value to 0, frequency to 440.0,
      * and runs the setName method for the given value.
      */
     public Note() {
-        length = "q";
+        length = 0.25;
         value = 0;
         frequency = 440.0;
         setName(value);
     }
 
     /**Constructor to create a Note object while providing a length and value for the desired note
-     * @param noteLength Desired length of Note object
+     * @param noteLength Double value corresponding to desired note length
      * @param noteVal Value of Note object
      */
-    public Note(String noteLength, int noteVal) {
+    public Note(double noteLength, int noteVal) {
         length = noteLength;
         value = noteVal;
         setName(noteVal);
@@ -31,9 +29,9 @@ public class Note implements Comparable<Note> {
     }
 
     /** Basic get method for length value
-     * @return String stored in length field
+     * @return Double stored in length field
      */
-    public String getLength() {
+    public double getLength() {
         return length;
     } 
 
@@ -57,11 +55,12 @@ public class Note implements Comparable<Note> {
      */
     public double getFrequency() {
             return frequency;
-        }
+    }
+
     /**Setter method for length field
-     * @param noteLength String containing desired length of note
+     * @param noteLength Double containing desired length of note
      */
-    public void setLength(String noteLength) {
+    public void setLength(double noteLength) {
         length = noteLength;
     }
 
@@ -173,9 +172,9 @@ public class Note implements Comparable<Note> {
     /**Method to format noteName and length for inputing into JFugue player
      * @return String containing noteName and length, formatted for JFugue
      */
-    public String toJfugue() {
+    /*public String toJfugue() {
         return noteName + length;
-    }
+    }*/
 
     /**
      * Implements compareTo method of Comparable interface, comparing the frequency of

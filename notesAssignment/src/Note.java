@@ -6,6 +6,8 @@ public class Note implements Comparable<Note> {
     private int value;
     private double frequency;
 
+    
+
     /**
      * NoARg contstructor, sets length to a quarter note, value to 0, frequency to 440.0,
      * and runs the setName method for the given value.
@@ -49,6 +51,13 @@ public class Note implements Comparable<Note> {
         return noteName;
     }
 
+    /**
+     * Gets value stored in frequency field
+     * @return double value stored in frequency
+     */
+    public double getFrequency() {
+            return frequency;
+        }
     /**Setter method for length field
      * @param noteLength String containing desired length of note
      */

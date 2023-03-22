@@ -179,8 +179,8 @@ public class Note implements Comparable<Note> {
     }*/
 
     /**
-     * Implements compareTo method of Comparable interface, comparing the frequency of
-     * the Note passed as an arg to the frequency of the calling Note. 
+     * Implements compareTo method of Comparable interface, comparing first the length
+     * field of both objects, than the frequency field.
      * @param input Note object to compare
      * @return pos value if calling object is greater than, negative value if it is less 
      * than, and 0 if objects are equal

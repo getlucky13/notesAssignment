@@ -1,5 +1,7 @@
 import java.lang.Comparable;
-
+/**
+ * Class to model a musical Note
+ */
 public class Note implements Comparable<Note> {
 
     private String noteName;
@@ -180,8 +182,8 @@ public class Note implements Comparable<Note> {
      * Implements compareTo method of Comparable interface, comparing the frequency of
      * the Note passed as an arg to the frequency of the calling Note. 
      * @param input Note object to compare
-     * @return pos value if calling object is >, negative value if it is <, and 0
-     * if objects are equal
+     * @return pos value if calling object is greater than, negative value if it is less 
+     * than, and 0 if objects are equal
      */
     public int compareTo(Note input) {
         return (int) (this.frequency - input.frequency);

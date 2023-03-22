@@ -45,19 +45,19 @@ public class Driver {
         c3Scale.add(B3);
         
         /*
-         * Creates a player object
-         */
-        Player player = new Player();
-
-        /*
          * Sorts c3Scale, demonstrating correct implementation of Comparable interface
          */
         Collections.sort(c3Scale);
-
+        
         /*
          * Uses compareTo to output a string to user
          */
         int compareToTest = A3.compareTo(E3);
+
+        /*
+         * Creates a player object
+         */
+        //Player player = new Player();
 
         /*
          * Feeds the c3Scale ArrayList into a Pattern object, and plays the pattern,
@@ -65,52 +65,5 @@ public class Driver {
          */
         /*Pattern scale = toPattern(c3Scale).setVoice(1).setInstrument("Piano");
         player.play(scale);*/
-        
-        /*
-         * Creates two arrays of Note objects
-        
-        Note[] DAG = {D3, A3, G3};
-        Note[] CDG = {C4, D4, G3};
-
-        /*
-         * Creates a player object
-        
-        Player player = new Player();
-        
-        /*
-         * Tests isSharp method
-         
-        Note Bb6 = new Note("h", 25);
-        Boolean toTest = Bb6.isSharp(Bb6.getVal());
-        if(toTest == true) {
-            player.play(Bb6.toJfugue());
-        }
-        /*
-         * Sets length of Note A4 to a whole note, or w
-         
-        A4.setLength("w");
-
-        /*
-         * Uses the toPattern method to create patterns from each array, as well as sets the
-         * voice and instrument for said patterns
-         
-        Pattern p3 = toPattern(DAG).setVoice(3).setInstrument("Guitar");
-        Pattern p4 = toPattern(CDG).setVoice(3).setInstrument("Guitar");
-        
-        /*
-         * Adds the patterns together to make one single pattern
-         
-        Pattern p5 = p3.add(p4);
-
-        /*
-         * Plays created pattern
-         
-        player.play(p5);
-
-        /*
-         * Tests declaring an instrument through JFugue in combination with
-         * toJfugue method.
-         
-        player.play("I[Guitar] "+ A4.toJfugue());*/
     }
 }

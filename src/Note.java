@@ -30,21 +30,21 @@ public class Note implements Comparable<Note> {
         setFreq(noteVal);
     }
 
-    /** Basic get method for length value
+    /** Gets value stored in length field
      * @return Double stored in length field
      */
     public double getLength() {
         return length;
     } 
 
-    /**Basic get method for Note value
+    /**Gets value stored in value field
      * @return int stored in value field
      */
     public int getVal() {
         return value;
     }
 
-    /**Basic get method for Note name
+    /**Gets string stored in noteNAme field
      * @return String containing the value stored in noteName field
      */
     public String getName() {
